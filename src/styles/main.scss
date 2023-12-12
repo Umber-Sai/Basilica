@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
     background-color: #141414;
     display: flex;
-    -webkit-flex-direction: column;
+    flex-direction: column;
     -webkit-align-items: end;
     .close {
         font-size: 0;
