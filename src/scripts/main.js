@@ -22,17 +22,11 @@ page.on('touchstart', (event) => {
 page.on('touchend', () => {
     if (offset > 100) {
         currentRight = menuWidth;
-        page.animate({right : currentRight}, 400, () => {
-            $('.bottom_menu ul').css({zIndex : 100});
-        });
     }
     if (offset < -60) {
         currentRight = 0;
-        page.animate({right : currentRight}, 400, () => {
-            $('.bottom_menu ul').css({zIndex : 0});
-        });
     }
-    
+    page.animate({right : currentRight});
     posInit = 0;
     offset = 0;
     $('.posInitX span').text(posInit);
@@ -50,3 +44,4 @@ $('body').on('touchmove', (event) => {
     $('.pos span').text(position);
     $('.offsetX span').text(offset);
 });
+
