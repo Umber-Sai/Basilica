@@ -1,0 +1,129 @@
+@import 'constants';
+@import 'hamburgers';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $second-color-text;
+    font-family: Nunito, sans-serif;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 400;
+
+    background-color: $main-color;
+    // overflow-x: hidden;
+}
+
+.numbers {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    color: red;
+}
+
+.bottom_menu {
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: blue;
+    display: flex;
+    justify-content: end;
+    .menu__items {
+        background-color: #141414;
+        width: 65vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        list-style: none;
+        .menu__item a{
+            color: $main-color-text;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
+
+.page {
+    position: relative;
+    right: 0;
+
+    background-color: $main-color;
+}
+
+.header {
+    padding: 24px 0 60px;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr clamp(315px, 50%, 576px) 1fr;
+        column-gap: 100px;
+        align-items: center;
+        .hamburger {
+            justify-self: end;
+            display: none;
+            span {
+                color: $second-color-text;
+            }
+        }
+        .header__menu{
+            .menu__items{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                list-style: none;
+                .menu__item {
+                    a {
+                        color: $main-color-text;
+                        font-size: 16px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+.main {
+    padding: 60px 0;
+    .container {
+        width: clamp(290px, 60%, 748px);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        .main__title {
+            color: $main-color-text;
+            font-size: clamp(36px, 8vw, 96px);
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .main__text {
+            margin-bottom: 72px;
+        }
+    }
+}
+
+.pizza {
+    position: relative;
+    height: calc(87vw + 100vw / -3.26);
+    img {
+        width: 100%;
+        position: absolute;
+        top: calc(100vw / -3.26);
+        left: 0;
+    }
+}
+
+
+
+
+
+@import 'adaptive';

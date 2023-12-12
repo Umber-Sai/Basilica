@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Nunito;
+    src: url('../../fonts/Nunito-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../../fonts/Nunito-Bold.ttf');
+    font-weight: 700;
+}
+
+$main-color: #1F1F1F;
+$main-color-text: #848D6F;
+$second-color-text: #515647;
+$button-text: #1F1F1F;
+
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 204px;
+    height: 57px;
+    border-radius: 30px;
+    background-color: $main-color-text;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    font-family: Nunito, sans-serif;
+    color: $button-text;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+
