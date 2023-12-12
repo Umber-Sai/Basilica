@@ -1,26 +1,14 @@
 @media screen and (max-width: 506px){
 
         .header {
+            padding-bottom: 0;
             .container {
-                grid-template-columns: 1fr 1fr;
-                gap: 0;
-                .hamburger {
-                    display: block;
+                grid-template-columns: 1fr;
+                .logo {
+                    text-align: center;
                 }
                 .header__menu {
                     display: none;
-                    &.openMenu {
-                        display: block;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: blue;
-                    }
                 }
             }
         }
