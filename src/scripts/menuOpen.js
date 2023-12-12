@@ -1,11 +1,3 @@
-const $hamburger = $(".hamburger");
-$hamburger.on("click", function (e) {
-    $hamburger.toggleClass("is-active");
-    // Do something else, like open/close menu
-    // $('.header__menu').toggleClass("openMenu")
-});
-
-
 
 const page = $('.page');
 let posInit = 0;
