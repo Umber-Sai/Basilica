@@ -169,7 +169,36 @@ body {
             text-align: center;
             font-size: clamp(28px, 6vw, 64px);
             font-weight: 700;
-            margin-bottom: clamp(50px, 10vw, 96px);
+            margin-bottom: clamp(40px, 10vw, 96px);
+        }
+        .choose__size {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(10px, 5%, 48px);
+            margin-bottom: clamp(10px, 5%, 48px);
+            label {
+                input {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                }
+                span{
+                    display: inline-block;
+                    padding: clamp(10px, 3vw, 14px) clamp(10px, 5vw, 48px);
+                    border: 2px solid $main-color-text;
+                    border-radius: 30px;
+                    user-select: none;
+    
+                    color: $main-color-text;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                input:checked+span {
+                    background-color: $main-color-text;
+                    color: $main-color;
+                }
+            }
         }
         .choose__cards {
             display: flex;
