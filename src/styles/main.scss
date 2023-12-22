@@ -8,7 +8,7 @@
 body {
     color: $second-color-text;
     font-family: Nunito, sans-serif;
-    font-size: clamp(14px, 2vw, 20px);
+    // font-size: clamp(14px, 2vw, 20px);
     font-weight: 400;
 
     background-color: $main-color;
@@ -102,6 +102,7 @@ body {
             margin-bottom: 24px;
         }
         .main__text {
+            font-size: clamp(14px, 2vw, 20px);
             margin-bottom: 72px;
         }
     }
@@ -154,6 +155,7 @@ body {
                     font-weight: 700;
                 }
                 .card__text {
+                    font-size: clamp(14px, 2vw, 20px);
                     grid-column: 1 / 3;
                 }
             }
@@ -222,9 +224,9 @@ body {
                     display: flex;
                     justify-content: center;
                     column-gap: 12px;
-                    margin-bottom: 48px;
+                    margin-bottom: clamp(25px, 5vw, 48px);
                     img {
-                        width: 44px;
+                        width: clamp(35px, 3vw, 44px);
                     }
                 }
                 .card__bottom {
@@ -243,6 +245,120 @@ body {
     }
 }
 
+.order {
+    padding: 80px 0 241px;
+    .container {
+        position: relative;
+        .order__title {
+            color: $main-color-text;
+            text-align: center;
+            font-size: clamp(28px, 6vw, 64px);
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .order__text {
+            font-size: clamp(14px, 2vw, 20px);
+            margin: 0 auto;
+            margin-bottom: clamp(40px, 10vw, 96px);
+            width: clamp(230px, 50%, 492px);
+            text-align: center;
+        }
+        .order__form {
+            width: clamp(290px, 50%, 368px);
+            .input {
+               height: 57px;
+               width: 100%;
+               display: grid;
+               grid-template-columns:37px max-content 1fr;
+               margin-bottom: 18px;
+
+               position: relative;
+               
+               .right-pass, .left-pass {
+                position: relative;
+                overflow: hidden;
+               }
+                .left-pass::before {
+                    content: '';
+                    display: block;
+                    width: 370px;
+                    height: 53px;
+                    border: 2px solid $main-color-text;
+                    border-radius: 30px;
+                    position: absolute;
+                }
+                .right-pass::before {
+                    content: '';
+                    display: block;
+                    width: 370px;
+                    height: 53px;
+                    border: 2px solid $main-color-text;
+                    border-radius: 30px;
+                    position: absolute;
+                    right: 0;
+                }
+                label {
+                    border-bottom: 2px solid $main-color-text;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $main-color-text;
+                        transform: translateX(-100%);
+                        position: relative;
+                        right: -100%;
+                        transition: all .3s;
+                    }
+                    span {
+                        font-size: clamp(20px, 2vw, 20px);
+                        padding: 0 10px;
+                        position: relative;
+                        top: 13px;
+                        transition: all .3s;
+                    }
+                }
+                input {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    transform: translate(-50%, -50%);
+                    width: 74%;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    border-radius: 30px;
+                    color: $main-color-text;
+                    font-size: 16px;
+                    padding: 17.5px 48px;
+                }
+                input:focus ~ label, input:valid ~ label {
+                    &::before {
+                        width: 0;
+                    }
+                    span {
+                        padding: 5px;
+                        color: $main-color-text;
+                        font-size: 15px;
+                        top: -13px;
+                    }
+                }
+            }
+            .btn {
+                width: 100%;
+                
+            }
+        }
+        .bg_img {
+            width: clamp(100px, 60vw, 784px);
+            position: absolute;
+            top: 70%;
+            right: 0;
+            transform: translateY(-50%)
+        }
+    }
+}
 
 
 

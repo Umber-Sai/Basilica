@@ -176,7 +176,7 @@
                 </div>
                 <div class="choose__size">
                     <label>
-                        <input type="radio" name="size">
+                        <input type="radio" name="size" checked>
                         <span>24 см</span>
                     </label>
                     <label>
@@ -300,12 +300,52 @@
                             </div>
                         </div>
                     </div>
-                
-
                 </div>
             </div>
         </div>
+        <div class="order">
+            <div class="container">
+                <div class="order__title">
+                    Заказать пиццу
+                </div>
+                <div class="order__text">
+                    Заранее забронируйте столик и сделайте заказ,
+                    чтобы к вашему приходу пицца была готова.
+                </div>
+                <form class="order__form">
+                    <div class="input">
+                        <div class="left-pass"></div>
+                        <input type="text" id="name" required>
+                        <label for="name">
+                            <span>Имя</span>
+                        </label>
+                        <div class="right-pass"></div>
+                    </div>
+                   
+                    <div class="input">
+                        <div class="left-pass"></div>
+                        <input type="text" id="tel" required>
+                        <label for="tel">
+                            <span>Телефон</span>
+                        </label>
+                        <div class="right-pass"></div>
+                    </div>
+
+                    <div class="input">
+                        <div class="left-pass"></div>
+                        <input type="text" id="product" required>
+                        <label for="product">
+                            <span>Пицца</span>
+                        </label>
+                        <div class="right-pass"></div>
+                    </div>
+                    <button class="btn">Заказать</button>
+                </form>
+                <img class="bg_img" src="img/order/pizza-slice.png" alt="pizza-slice">
+            </div>
+        </div>
     </div>
+
 
 
         

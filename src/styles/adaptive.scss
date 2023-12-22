@@ -14,3 +14,16 @@
         }
     }
 
+@media screen and (max-width: 900px) {
+    .order {
+        .container {
+            .order__form {
+                margin: 0 auto;
+            }
+            .bg_img {
+                display: none;
+            }
+        }
+    }
+    
+}
