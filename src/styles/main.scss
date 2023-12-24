@@ -60,9 +60,15 @@ body {
     background-color: $main-color;
     .tongue {
         position: fixed;
-        right: -480px;
+        right: 0;
         top: 100px;
         z-index: 10;
+        min-width: 50px;
+        width: 50px;
+        max-width: 230px;
+
+        fill: #A62323;
+        display: none;
     }
 }
 
@@ -284,6 +290,7 @@ body {
                .right-pass, .left-pass {
                 position: relative;
                 overflow: hidden;
+                height: 57px;
                }
                 .left-pass::before {
                     content: '';
@@ -306,6 +313,7 @@ body {
                 }
                 label {
                     border-bottom: 2px solid $main-color-text;
+                    height: 55px;
                     &::before {
                         content: '';
                         display: block;

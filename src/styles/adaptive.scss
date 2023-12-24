@@ -1,5 +1,10 @@
 @media screen and (max-width: 506px){
 
+        .page .tongue {
+            display: block;
+            animation: tongue_reveal .5s;
+        }
+
         .header {
             padding-bottom: 0;
             .container {
@@ -12,6 +17,7 @@
                 }
             }
         }
+
     }
 
 @media screen and (max-width: 900px) {
@@ -27,4 +33,21 @@
         }
     }
     
+}
+
+@keyframes tongue_reveal {
+    from {
+        right: -50px;
+        width: 50px;
+    }
+
+    60% {
+        right: 0;
+    }
+    70% {
+        width: 70px;
+    }
+    to {
+        width: 50px;
+    }
 }

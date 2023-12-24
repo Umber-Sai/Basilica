@@ -12,6 +12,7 @@ $(window).resize(() => {
    if (windowSize > 506) {
     currentRight = 0;
     page.css({right : currentRight});
+    tongue.css({right : currentRight});
    }
 })
 
@@ -22,15 +23,12 @@ page.on('touchstart', (event) => {
 page.on('touchend', () => {
     if (offset > 100) {
         currentRight = menuWidth;
-        tongue.animate({right : '+=30px', opacity : '0'}, 
-        () => tongue.css({right : '-600px'}));
     }
     if (offset < -60) {
         currentRight = 0;
-        tongue.css({right : '-600px', opacity : '100'})
     }
     page.animate({right : currentRight});
-    tongue.animate({right : '-480px'});
+    tongue.animate({right : currentRight, width : 50});
     posInit = 0;
     offset = 0;
 });
@@ -39,12 +37,11 @@ $('body').on('touchmove', (event) => {
     if (windowSize < 506) {
         let position = event.touches[0].clientX
         offset = posInit - position
-        if (offset < 200 && offset > 0) {
-            tongue.css({right : (-480 + (offset * Math.abs(offset) / 300))});
-        }
         let newRight = currentRight + offset;
+        tongue.css({width : (offset * Math.abs(offset) / 100)});
         if (100 < newRight && newRight < menuWidth) {
             page.css({right : (currentRight + (offset * Math.abs(offset) / 1000) - 3.6)}); 
+            tongue.css({right : (currentRight + (offset * Math.abs(offset) / 1000) - 3.6)}); 
         } 
     }
 });
