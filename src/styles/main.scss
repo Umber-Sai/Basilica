@@ -55,9 +55,9 @@ body {
 .page {
     position: relative;
     right: 0;
-    // display: none;
     box-shadow: -10px 0px 40px black;
     background-color: $main-color;
+    overflow: hidden;
     .tongue {
         position: fixed;
         right: 0;
@@ -313,7 +313,7 @@ body {
                 }
                 label {
                     // border-bottom: 2px solid $main-color-text;
-                    // height: 55px;
+                    height: 57px;
                     position: relative;
                     &::before {
                         content: '';
@@ -387,6 +387,30 @@ body {
     }
 }
 
+.footer {
+    padding: 48px 0;
+    background-color: $main-color;
+    position: relative;
+    z-index: 2;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.shadow {
+    width: 1560px;
+    height: 68px;
+    background-color: #848D6F;
+    filter: blur(48px);
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 48px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
 
 
 
