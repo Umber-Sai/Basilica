@@ -2,7 +2,7 @@
 
         .page .tongue {
             display: block;
-            animation: tongue_reveal .5s;
+            animation: tongue_reveal 3s;
         }
 
         .header {
@@ -41,10 +41,15 @@
         width: 50px;
     }
 
-    60% {
+    80% {
+        right: -50px;
+        width: 50px;
+    }
+
+    90% {
         right: 0;
     }
-    70% {
+    95% {
         width: 70px;
     }
     to {
