@@ -67,13 +67,15 @@ body {
         width: 50px;
         max-width: 230px;
 
-        fill: #A62323;
+        fill: $red-color;
         display: none;
     }
 }
 
 .header {
     padding: 24px 0 60px; 
+    position: relative;
+    z-index: 2;
     .container{
         display: grid;
         grid-template-columns: 1fr clamp(315px, 50%, 576px) 1fr;
@@ -102,11 +104,14 @@ body {
 
 .main {
     padding: 60px 0;
+    padding-bottom: calc(210px + (100vw - 320px) * 0.5625);
+    // padding-bottom: 100px;
+    position: relative;
     .container {
         width: clamp(290px, 60%, 748px);
         text-align: center;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         .main__title {
             color: $main-color-text;
             font-size: clamp(36px, 8vw, 96px);
@@ -118,16 +123,11 @@ body {
             margin-bottom: 72px;
         }
     }
-}
-
-.pizza {
-    position: relative;
-    height: calc(87vw + 100vw / -3.26);
-    img {
+    .main__img {
         width: 100%;
         position: absolute;
-        top: calc(100vw / -3.26);
-        left: 0;
+        bottom: 0;
+        z-index: 1;
     }
 }
 
@@ -312,7 +312,6 @@ body {
                     right: 0;
                 }
                 label {
-                    // border-bottom: 2px solid $main-color-text;
                     height: 57px;
                     position: relative;
                     &::before {
@@ -321,8 +320,6 @@ body {
                         width: 100%;
                         border-top: 2px solid $main-color-text;
                         transform: translateX(-100%);
-                        // position: relative;
-                        // right: -100%;
                         position: absolute;
                         top: 0;
                         left: 100%;
@@ -334,7 +331,7 @@ body {
                         width: 100%;
                         border-bottom: 2px solid $main-color-text;
                         position: absolute;
-                        bottom: 0;
+                        top: 55px;
                         left: 0;
                     }
                     span {
@@ -369,6 +366,15 @@ body {
                         color: $main-color-text;
                         font-size: 15px;
                         top: -13px;
+                    }
+                }
+                &.notValidate {
+                    .left-pass::before, .right-pass::before, label::before, label::after {
+                        border-color: $red-color !important;
+                    }
+                    label span {
+                        color: $red-color !important;
+                        opacity: 50%;
                     }
                 }
             }
