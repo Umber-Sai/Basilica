@@ -49,8 +49,10 @@ $('body').on('touchmove', (event) => {
 $('.close').click(() => {
     currentRight = 0;
     page.animate({right : currentRight});
+    tongue.animate({right : currentRight, width : 50});
 })
 $('.bottom_menu .menu__items').click(() => {
     currentRight = 0;
     page.animate({right : currentRight});
+    tongue.animate({right : currentRight, width : 50});
 })
