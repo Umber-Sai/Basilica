@@ -24,6 +24,12 @@
     
 }
 
+@media screen and (min-width: 506px) {
+    .page .tongue {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .order {
         padding-bottom: 200px;
