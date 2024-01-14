@@ -12,6 +12,10 @@ $(document).ready(() => {
                 isValide = false
             }
         }
+        const tel = $('#tel');
+        if(tel.val().match(/\d{4}$/) === null) {
+            tel.parent().addClass('notValidate');
+        }
         if(isValide) {
             $('.ordered').fadeIn(()=> {
                 $('.order__form')[0].reset();
@@ -26,3 +30,6 @@ $(document).ready(() => {
         $(this).parent().removeClass('notValidate');
     })
 })
+
+
+const string = '12345 678';
