@@ -38,7 +38,3 @@ window.addEventListener("DOMContentLoaded", function() {
     });
   
   });
-
-array.forEach(element => {
-    
-});
