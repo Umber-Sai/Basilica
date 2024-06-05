@@ -4,7 +4,7 @@ const tongue = $('.tongue');
 let posInit = 0;
 let offset = 0;
 let currentRight = 0;
-let menuWidth = 250;
+const menuWidth = 250;
 let windowSize = $(window).width();
 
 $(window).resize(() => {
@@ -45,6 +45,16 @@ $('body').on('touchmove', (event) => {
         } 
     }
 });
+
+tongue.on('click', () => {
+    if(currentRight === 0) {
+        currentRight = menuWidth;
+        page.animate({right : currentRight});
+        tongue.animate({right : currentRight, width : 50});
+        posInit = 0;
+        offset = 0;
+    }
+})
 
 $('.close').click(() => {
     currentRight = 0;
