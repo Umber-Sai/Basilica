@@ -8,7 +8,7 @@ $('.toWhyUs').click(function (event) {
     $('.why_us')[0].scrollIntoView({ behavior: "smooth"});
 });
 
-$('.toProduct').click(function (event) {
+$('.toProduct').click(function (event) { 
     event.preventDefault()
     $('.choose')[0].scrollIntoView({ behavior: "smooth"});
 });
